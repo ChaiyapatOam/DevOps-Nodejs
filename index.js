@@ -33,7 +33,7 @@ const postRouter = require("./routes/postRoutes");
 app.use("/posts", postRouter);
 
 app.get("/", (req, res) => {
-  res.send("<h1>Hello World 1234 </h1>");
+  res.send("<h1>Hello World </h1>");
   console.log("Hi!");
 });
 
