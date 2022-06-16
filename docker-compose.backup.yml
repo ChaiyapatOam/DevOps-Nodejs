@@ -1,0 +1,27 @@
+version: '3.4'
+
+# services:
+#   devopsnodejs:
+#     image: devopsnodejs
+#     build:
+#       context: .
+#       dockerfile: ./Dockerfile
+#     environment:
+#       NODE_ENV: production
+#     ports:
+#       - 3000:3000
+
+services:
+  devops-node:
+    image: devops-node-image
+    build:
+      context: .
+    environment:
+      - PORT=3000
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+    # env_file:
+    # - ./.env
