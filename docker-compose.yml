@@ -9,6 +9,7 @@ services:
 
   devops-node:
     build: .
+    image: chaiyapatoam/devops-node
     environment:
     - PORT=3000
     depends_on:
